@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Vend%20Sans');
 @import 'tailwindcss';
+
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -9,3 +11,56 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Color Pallette*/
+    --color_primary: #263540;
+    --color_secondary: #bec8d0;
+    --color_background: #ebf0f0;
+    --color_accent:#ff9d52;
+    --color_text: #040316;
+    
+    /*Typography*/
+    --font_header: 'Anton', Sans-Serif;
+    --font_body: 'Vend Sans', Sans-Serif;
+    --font_weight_normal: 300;
+    --font_weight_bold: 700;
+
+    /*Spacing*/
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 3rem;
+}
+
+body {
+  font-family: var(--font_body);
+  font-weight: var(--font_weight_normal);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font_header);
+  font-weight: var(--font_weight_bold);
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
