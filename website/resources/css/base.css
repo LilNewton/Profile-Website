@@ -18,7 +18,7 @@
     --font_header: 'Anton', Sans-Serif;
     --font_body: 'Vend Sans', Sans-Serif;
     --font_weight_normal: 300;
-    --font_weight_bold: 700;
+    --font_weight_bold: 500;
 
     /*Spacing*/
     --spacing-xs: 0.25rem;
@@ -28,9 +28,12 @@
     --spacing-xl: 3rem;
 }
 
+/*Typography*/
+
 h1, h2, h3, h4, h5 {
     font-family: var(--font_header);
     font-weight: var(--font_weight_bold);
+    line-height:120%;
 }
 
 p, small{
@@ -52,6 +55,20 @@ h4 {font-size: 1.777rem; /* 28.48px */}
 h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
+
+.section-header::before{
+    content:"";
+    display:inline-block;
+    width:2.369rem;
+    height:2.369rem;
+    margin-right: 1rem;
+
+    background-image: url('../../public/icons/star.svg');
+    background-size:contain;
+    background-repeat:no-repeat;
+
+    vertical-align: baseline;
+}
 
 /*Container*/
 body {

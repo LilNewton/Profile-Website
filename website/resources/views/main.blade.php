@@ -29,12 +29,12 @@
     </div>
 
     <!--About Section-->
-    <div class="container__section">
+    <div id="about" class="container__section">
         <h2>I approach projects with a user-centered mindset,
             making sure the projects I handle deliver a smooth and
             straight forward experience for the user.
         </h2>
-        <h3>About Me</h3>
+        <h3 class="section-header">About Me</h3>
         <div class="about-me">
             <h2>Hello There!</h2>
             <p>I'm a computer science graduate frontend developer
@@ -51,7 +51,7 @@
 
     <!--Tools Section-->
     <div class="container__section">
-        <h3>Tools</h3>
+        <h3 class="section-header">Tools</h3>
         <div class="card card_tool">
             <h2>Languages</h2>
             <div class="tool-grid">
