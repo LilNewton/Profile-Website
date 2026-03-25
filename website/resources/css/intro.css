@@ -1,0 +1,12 @@
+#introduction{
+    margin-top:15%
+}
+
+#introduction h1{
+    color: var(--color_accent);
+}
+
+#introduction p{
+    width: 60%;
+    margin:20px 0 5%;
+}

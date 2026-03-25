@@ -15,9 +15,9 @@
     </div>
 
     <!--Introduction Section-->
-    <div class="container__section">
+    <div id="introduction" class="container__section">
         <h2>Chris John B. Borigas</h2>
-        <h1>Frontend Development</h1>
+        <h1>Frontend Developer</h1>
         <p>Good Day! I am Chris John Borigas.
             A frontend developer and Computer Science graduate from
             Bicol University College of Science with 240 hours of
@@ -86,7 +86,7 @@
 
     <!--Projects Section-->
     <div class="container__section">
-        <h2>Selected Projects</h2>
+        <h3>Selected Projects</h3>
         <div class="card card_project">
 
         </div>
