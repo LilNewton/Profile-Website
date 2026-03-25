@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5 {
 p, small{
     font-family: var(--font_body);
     font-weight: var(--font_weight_normal);
-    line-height:100%;
+    line-height:120%;
 }
 
 html {font-size: 100%;} /* 16px */

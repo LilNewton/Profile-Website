@@ -86,7 +86,7 @@
 
     <!--Projects Section-->
     <div class="container__section">
-        <h3>Selected Projects</h3>
+        <h3 class="section-header">Selected Projects</h3>
         <div class="card card_project">
 
         </div>
@@ -97,7 +97,7 @@
 
     <!--Experience Section-->
     <div class="container__section">
-        <h2>Experience</h2>
+        <h3 class="section-header">Experience</h3>
         <div class="card">
             <h4>Iraya Energies</h4>
             <h2>Software Engineer (OJT)</h2>
