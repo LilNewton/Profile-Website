@@ -3,6 +3,7 @@
 @import './base.css';
 @import './intro.css';
 @import './about.css';
+@import './tools.css';
 
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';

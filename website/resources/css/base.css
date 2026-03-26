@@ -59,15 +59,15 @@ small {font-size: 0.750rem; /* 12px */}
 .section-header::before{
     content:"";
     display:inline-block;
-    width:2.369rem;
-    height:2.369rem;
+    width:3rem;
+    height:3rem;
     margin-right: 1rem;
 
-    background-image: url('../../public/icons/star.svg');
+    background-image: url('../../public/icons/star-fill.svg');
     background-size:contain;
     background-repeat:no-repeat;
 
-    vertical-align: baseline;
+    vertical-align: bottom;
 }
 
 /*Container*/
@@ -81,6 +81,10 @@ body {
 
     height: 70%;
     margin: 18%;
+}
+
+.card{
+    margin: 5% 0% 0%;
 }
 
 /*Component*/
