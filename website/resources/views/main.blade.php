@@ -52,9 +52,9 @@
     <!--Tools Section-->
     <div id="tools-section" class="container__section">
         <h3 class="section-header">Tools</h3>
-        @foreach ($categories as $categoryName => $tools)
+        @foreach ($toolCategories as $toolCategoriesName => $tools)
         <div class="card card_tool">
-            <h2>{{$categoryName}}</h2>
+            <h2>{{$toolCategoriesName}}</h2>
             <div class="tool-grid">
                 @foreach ($tools as $tool)
                 <div class='tool'>
@@ -70,12 +70,25 @@
     <!--Projects Section-->
     <div class="container__section">
         <h3 class="section-header">Selected Projects</h3>
+        @foreach ($projects as $project)
         <div class="card card_project">
-
+            <div class="project-title">
+                <h4 class="project-count">
+                    {{ str($loop->iteration)->padLeft(2, '0') }}
+                </h4>
+                <h2>{{$project['title']}}</h2>
+                <h4>{{$project['subtitle']}}</h4>
+            </div>
+            <div class="project-tools">
+                @foreach ($project['toolsUsed'] as $tool)
+                <h5>{{$tool}}</h5>
+                @if (!$loop->last)
+                <img src="{{ asset('icons/star-circled.svg') }}" alt="">
+                @endif
+                @endforeach
+            </div>
         </div>
-        <div class="card card_project">
-
-        </div>
+        @endforeach
     </div>
 
     <!--Experience Section-->

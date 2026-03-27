@@ -8,8 +8,8 @@ class DataController extends Controller
 {
     public function index()
     {
-        $categories = [
-            'Languages' => [
+        $toolCategories = [
+            'LANGUAGES' => [
                 ['title' => 'C Language', 'icon' => 'c_language_logo.svg'],
                 ['title' => 'Java', 'icon' => 'java_logo.svg'],
                 ['title' => 'Python', 'icon' => 'python_logo.svg'],
@@ -18,24 +18,24 @@ class DataController extends Controller
                 ['title' => 'PHP', 'icon' => 'php_logo.svg']
             ],
 
-            'Frameworks' => [
+            'FRAMEWORKS' => [
                 ['title' => 'React.js', 'icon' => 'react_logo.svg'],
                 ['title' => 'Streamlit', 'icon' => 'streamlit_logo.svg'],
                 ['title' => 'Laravel', 'icon' => 'laravel_logo.svg']
             ],
 
-            'Designs' => [
+            'DESIGNS' => [
                 ['title' => 'Canva', 'icon' => 'canva_logo.svg'],
                 ['title' => 'Figma', 'icon' => 'figma_logo.svg'],
                 ['title' => 'Penpot', 'icon' => 'penpot_logo.svg']
             ],
 
-            "Version Control" => [
+            'VERSION CONTROL' => [
                 ['title' => 'Git', 'icon' => 'git_logo.svg'],
                 ['title' => 'Github', 'icon' => 'github_logo.svg']
             ],
 
-            'Documentation' => [
+            'DOCUMENTATION' => [
                 ['title' => 'MS Word', 'icon' => 'msword_logo.svg'],
                 ['title' => 'Google Docs', 'icon' => 'google_docs_logo.svg'],
                 ['title' => 'Libre Office', 'icon' => 'libreoffice_logo.svg'],
@@ -44,8 +44,19 @@ class DataController extends Controller
             ]
         ];
 
-        return view('main', compact(
-            'categories'
-        ));
+        $projects = [
+            [
+                'title' => 'Raya',
+                'subtitle' => 'Chatbot for Unstructured Research Data',
+                'toolsUsed' => ['Python', 'Streamlit', 'Figma']
+            ],
+            [
+                'title' => 'OLA',
+                'subtitle' => 'A Games of the Generals (GG) AI Strategy Engine Trained Using Self-Play',
+                'toolsUsed' => ['Javascript', 'React.js', 'CSS']
+            ]
+        ];
+
+        return view('main', compact('toolCategories', 'projects'));
     }
 }
