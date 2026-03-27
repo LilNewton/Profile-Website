@@ -15,7 +15,7 @@
     </div>
 
     <!--Introduction Section-->
-    <div id="introduction" class="container__section">
+    <div id="intro-section" class="container__section">
         <h2>Chris John B. Borigas</h2>
         <h1>Frontend Developer</h1>
         <p>Good Day! I am Chris John Borigas.
@@ -29,7 +29,7 @@
     </div>
 
     <!--About Section-->
-    <div id="about" class="container__section">
+    <div id="about-section" class="container__section">
         <h2>I approach projects with a user-centered mindset,
             making sure the projects I handle deliver a smooth and
             straight forward experience for the user.
@@ -50,39 +50,21 @@
     </div>
 
     <!--Tools Section-->
-    <div id="tools" class="container__section">
+    <div id="tools-section" class="container__section">
         <h3 class="section-header">Tools</h3>
+        @foreach ($categories as $categoryName => $tools)
         <div class="card card_tool">
-            <h2>Languages</h2>
+            <h2>{{$categoryName}}</h2>
             <div class="tool-grid">
-                <h5></h5>
-
+                @foreach ($tools as $tool)
+                <div class='tool'>
+                    <img src="{{ asset('icons/'.$tool['icon']) }}" alt="">
+                    <h5>{{$tool['title']}}</h5>
+                </div>
+                @endforeach
             </div>
         </div>
-        <div class="card card_tool">
-            <h2>Frameworks</h2>
-            <div class="tool-grid">
-
-            </div>
-        </div>
-        <div class="card card_tool">
-            <h2>Design</h2>
-            <div class="tool-grid">
-
-            </div>
-        </div>
-        <div class="card card_tool">
-            <h2>Version Control</h2>
-            <div class="tool-grid">
-
-            </div>
-        </div>
-        <div class="card card_tool">
-            <h2>Documentation</h2>
-            <div class="tool-grid">
-
-            </div>
-        </div>
+        @endforeach
     </div>
 
     <!--Projects Section-->

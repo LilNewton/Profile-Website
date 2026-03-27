@@ -8,40 +8,44 @@ class DataController extends Controller
 {
     public function index()
     {
-        $languages = [
-            ['title' => 'C Language', 'icon' => ''],
-            ['title' => 'Java', 'icon' => ''],
-            ['title' => 'Python', 'icon' => ''],
-            ['title' => 'Javascript', 'icon' => ''],
-            ['title' => 'CSS', 'icon' => ''],
-            ['title' => 'PHP', 'icon' => '']
+        $categories = [
+            'Languages' => [
+                ['title' => 'C Language', 'icon' => 'c_language_logo.svg'],
+                ['title' => 'Java', 'icon' => 'java_logo.svg'],
+                ['title' => 'Python', 'icon' => 'python_logo.svg'],
+                ['title' => 'Javascript', 'icon' => 'javascript_logo.svg'],
+                ['title' => 'CSS', 'icon' => 'css_logo.svg'],
+                ['title' => 'PHP', 'icon' => 'php_logo.svg']
+            ],
+
+            'Frameworks' => [
+                ['title' => 'React.js', 'icon' => 'react_logo.svg'],
+                ['title' => 'Streamlit', 'icon' => 'streamlit_logo.svg'],
+                ['title' => 'Laravel', 'icon' => 'laravel_logo.svg']
+            ],
+
+            'Designs' => [
+                ['title' => 'Canva', 'icon' => 'canva_logo.svg'],
+                ['title' => 'Figma', 'icon' => 'figma_logo.svg'],
+                ['title' => 'Penpot', 'icon' => 'penpot_logo.svg']
+            ],
+
+            "Version Control" => [
+                ['title' => 'Git', 'icon' => 'git_logo.svg'],
+                ['title' => 'Github', 'icon' => 'github_logo.svg']
+            ],
+
+            'Documentation' => [
+                ['title' => 'MS Word', 'icon' => 'msword_logo.svg'],
+                ['title' => 'Google Docs', 'icon' => 'google_docs_logo.svg'],
+                ['title' => 'Libre Office', 'icon' => 'libreoffice_logo.svg'],
+                ['title' => 'MS Excel', 'icon' => 'msexcel_logo.svg'],
+                ['title' => 'Google Sheets', 'icon' => 'google_sheets_logo.svg']
+            ]
         ];
 
-        $frameworks = [
-            ['title' => 'React.js', 'icon' => ''],
-            ['title' => 'Streamlit', 'icon' => ''],
-            ['title' => 'Laravel', 'icon' => '']
-        ];
-
-        $designs = [
-            ['title' => 'Canva', 'icon' => ''],
-            ['title' => 'Figma', 'icon' => ''],
-            ['title' => 'Panpot', 'icon' => '']
-        ];
-
-        $versionControl = [
-            ['title' => 'Git', 'icon' => ''],
-            ['title' => 'Github', 'icon' => '']
-        ];
-
-        $documentation = [
-            ['title' => 'MS Word', 'icon' => ''],
-            ['title' => 'Google Docs', 'icon' => ''],
-            ['title' => 'Libre Office', 'icon' => ''],
-            ['title' => 'MS Excel', 'icon' => ''],
-            ['title' => 'Google Sheets', 'icon' => '']
-        ];
-
-        return view('main', compact('languages'));
+        return view('main', compact(
+            'categories'
+        ));
     }
 }

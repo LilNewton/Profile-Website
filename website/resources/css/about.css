@@ -1,12 +1,12 @@
-#about h2{
+#about-section h2{
     width:90%;
     margin-bottom:5%;
 }
 
-#about .section-header{
+#about-section .section-header{
     border-bottom:4px solid var(--color_accent);
 }
-#about .section-header::before{
+#about-section .section-header::before{
     content:none;
 }
 
@@ -16,7 +16,7 @@
     padding-top:5%;
 }
 
-#about .about-me h2{
+#about-section .about-me h2{
     width:40%;
     padding-left:5%;
 }

@@ -1,12 +1,12 @@
-#introduction{
+#intro-section{
     margin-top:15%
 }
 
-#introduction h1{
+#intro-section h1{
     color: var(--color_accent);
 }
 
-#introduction p{
+#intro-section p{
     width: 60%;
     margin:20px 0 5%;
 }
