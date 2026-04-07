@@ -6,7 +6,7 @@
     
     padding:2%;
     border-radius: 20px;
-    background-color: color-mix(in srgb, var(--color_primary), transparent 20%);
+    background-color: color-mix(in srgb, var(--color_primary), white 20%);
 }
 
 .card_project img{
