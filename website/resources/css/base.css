@@ -78,13 +78,16 @@ body {
 .container__section{
     display:flex;
     flex-direction:column;
-
-    height: 70%;
+    flex-wrap:wrap;
+    
+    max-width:100%;
+    height: fit-content;
     margin: 18%;
+
 }
 
 .card{
-    margin: 5% 0% 0%;
+    margin-top: 5%;
 }
 
 /*Component*/

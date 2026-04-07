@@ -72,21 +72,21 @@
         <h3 class="section-header">Selected Projects</h3>
         @foreach ($projects as $project)
         <div class="card card_project">
-            <div class="project-title">
-                <h4 class="project-count">
-                    {{ str($loop->iteration)->padLeft(2, '0') }}
-                </h4>
-                <h2>{{$project['title']}}</h2>
-                <h4>{{$project['subtitle']}}</h4>
+            <div class="project-detail">
+                <div class="project-detail__title">
+                    <h4 class="project-detail__count">
+                        {{ str($loop->iteration)->padLeft(2, '0') }}
+                    </h4>
+                    <h2>{{$project['title']}}:</h2>
+                    <h4 class='subtitle'>{{$project['subtitle']}}</h4>
+                </div>
+                <ul class="project-detail__tools">
+                    @foreach ($project['toolsUsed'] as $tool)
+                    <li>{{$tool}}</li>
+                    @endforeach
+                </ul>
             </div>
-            <div class="project-tools">
-                @foreach ($project['toolsUsed'] as $tool)
-                <h5>{{$tool}}</h5>
-                @if (!$loop->last)
-                <img src="{{ asset('icons/star-circled.svg') }}" alt="">
-                @endif
-                @endforeach
-            </div>
+            <img></img>
         </div>
         @endforeach
     </div>
