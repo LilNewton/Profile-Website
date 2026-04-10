@@ -93,17 +93,20 @@
 
     <!--Experience Section-->
     <div class="container__section">
-        <h3 class="section-header">Experience</h3>
-        <div class="card">
-            <h4>Iraya Energies</h4>
-            <h2>Software Engineer (OJT)</h2>
-            <p>June - July (2024)</p>
+        <h3 id=experience class="section-header">Experience</h3>
+        @foreach($experiences as $experience)
+        <div class="card card_experience">
+            <div class="card_experience__description">
+                <div class="description__group">
+                    <h5>{{$experience['group']}}</h5>
+                    <p>{{$experience['start_date']}} - {{$experience['end_date']}}</p>
+                </div>
+                <h3>{{$experience['role']}}</h3>
+            </div>
+            <img class='center-icon'></img>
+            <div class='center-line'></div>
         </div>
-        <div class="card">
-            <h4>Project OLA</h4>
-            <h2>Researcher/Frontend Develoer</h2>
-            <p>Aujust 2024 - May 2025</p>
-        </div>
+        @endforeach
     </div>
 
     <!--Contact Section-->

@@ -57,6 +57,21 @@ class DataController extends Controller
             ]
         ];
 
-        return view('main', compact('toolCategories', 'projects'));
+        $experiences = [
+            [
+                'group' => 'Iraya Energies',
+                'role' => 'Software Engineer (OJT)',
+                'start_date' => 'June 2024',
+                'end_date' => 'July 2024'
+            ],
+            [
+                'group' => 'Project Ola',
+                'role' => 'Researcher/Frontend Developer',
+                'start_date' => 'August 2024',
+                'end_date' => 'May 2025'
+            ]
+        ];
+
+        return view('main', compact('toolCategories', 'projects', 'experiences'));
     }
 }
