@@ -24,7 +24,7 @@
             industry experience and 3 notable projects, focusing on
             building scalable and responsive web solutions.
         </p>
-        <button>Resume</button>
+        <a class='primary_btn'>Resume</a>
 
     </div>
 
@@ -109,14 +109,22 @@
         @endforeach
     </div>
 
-    <!--Contact Section-->
-    <div class="container__section">
-        <h4>My Contacts</h4>
-        <h3>chrisjohnbborigas@gmail.com</h3>
-        <div class="contact-icons">
 
-        </div>
-    </div>
+
 </body>
+
+<footer id=contact_info class="container__section">
+    <!--Contact Section-->
+    <h4>My Contacts</h4>
+    <h3>chrisjohnbborigas@gmail.com</h3>
+    <div class="contacts">
+        @foreach ($contacts as $contact)
+        <a>
+            <img class='contact__icon' src="{{ asset('icons/'.$contact['icon']) }}" alt={{$contact['title']}}>
+        </a>
+        @endforeach
+    </div>
+</footer>
+
 
 </html>

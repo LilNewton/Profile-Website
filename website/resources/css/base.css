@@ -91,7 +91,8 @@ body {
 }
 
 /*Component*/
-button{
+button, .primary_btn{
+    display:grid;
     color:var(--color_background);
     background-color: var(--color_primary);
     width:180px;
@@ -99,4 +100,6 @@ button{
     border-radius: 10px;
 
     font-size:1.333rem;
+    justify-items: center;
+    align-items: center;
 }

@@ -72,6 +72,25 @@ class DataController extends Controller
             ]
         ];
 
-        return view('main', compact('toolCategories', 'projects', 'experiences'));
+        $contacts = [
+            [
+                'title' => 'Gmail',
+                'icon' => 'gmail_logo.svg'
+            ],
+            [
+                'title' => 'Github',
+                'icon' => 'github_logo.svg'
+            ],
+            [
+                'title' => 'LinkedIn',
+                'icon' => 'linkedin_logo.svg'
+            ],
+            [
+                'title' => 'Facebook',
+                'icon' => 'facebook_logo.svg'
+            ]
+        ];
+
+        return view('main', compact('toolCategories', 'projects', 'experiences', 'contacts'));
     }
 }
