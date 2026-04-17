@@ -1,0 +1,37 @@
+function ExperienceSection(){
+    const experiences = [
+        {
+        group : 'Iraya Energies',
+        role : 'Software Engineer (OJT)',
+        start_date : 'June 2024',
+        end_date : 'July 2024'
+        },
+        {
+        group : 'Project Ola',
+        role : 'Researcher/Frontend Developer',
+        start_date : 'August 2024',
+        end_date : 'May 2025'
+        }
+    ];
+
+    return(
+        <div className="container__section">
+        <h3 id = 'experience' className="section-header">Experience</h3>
+            {experiences.map(experience => 
+                <div key = {experience.group}className="card_experience">
+                    <div className="card_experience__description">
+                        <div className="description__group">
+                            <h5>{experience.group}</h5>
+                            <p>{experience.start_date} - {experience.end_date}</p>
+                        </div>
+                        <h3>{experience.role}</h3>
+                    </div>
+                    <img className='center-icon'/>
+                    <div className='center-line'></div>
+                </div>
+            )}
+        </div>
+    )
+}
+
+export default ExperienceSection;

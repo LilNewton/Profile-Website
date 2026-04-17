@@ -1,0 +1,87 @@
+#experience{
+    margin-bottom: 10%;
+}
+
+.card_experience{
+    position:relative;
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    height:content;
+    margin-top:0%;
+}
+
+.card_experience:nth-child(odd){
+    direction:rtl;
+}
+
+.center-icon{
+    grid-column: 2;
+    position:absolute;
+    z-index:1;
+    height:50px;
+    width:50px;
+    margin-top: -1rem;
+
+    background-image: url('../assets/icons/star-circle-fill-accent.svg');
+    padding:1px;
+}
+
+.center-line{
+    grid-column: 2;
+    margin-left: 20px;
+    margin-top: 12px;
+    width: 10px;
+    height: 100%;
+    background-color: var(--color_accent);
+
+    border-width:4px;
+    border-style:solid;
+    border-left-color: var(--color_primary);
+    border-right-color: var(--color_primary);
+}
+
+.card_experience:nth-child(odd) .center-line{
+    margin-right: 20px;
+}
+
+.card_experience:last-child .center-line{
+    display:none;
+}
+
+.card_experience__description{
+    display:flex;
+    flex-direction:column;
+
+    margin-right:10%;
+    direction:rtl;
+}
+
+.card_experience__description h3{
+    margin-right: 2.5rem;
+}
+
+.card_experience:nth-child(odd) .card_experience__description{
+    margin-left:10%;
+    margin-right:0%;
+    direction:ltr;
+}
+
+.card_experience:nth-child(odd) .card_experience__description h3{
+    margin-left: 2.5rem;
+    margin-right:0%;
+}
+
+.description__group{
+    display:flex;
+    flex-direction:row;
+    align-items:baseline;
+    gap:1rem;
+}
+
+.description__group h5{
+    color:var(--color_accent);
+}
+
+
+
+

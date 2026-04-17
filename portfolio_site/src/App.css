@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Vend%20Sans');
+
+/*Sections*/
+@import './sections/intro.css';
+@import './sections/about.css';
+@import './sections/tools.css';
+@import './sections/project.css';
+@import './sections/experience.css';
+@import './sections/contact.css';
+
+/*Components*/
+@import 'components/button.css';
+@import 'components/container.css';
+
