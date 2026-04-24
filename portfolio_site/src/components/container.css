@@ -22,6 +22,7 @@
     height: fit-content;
     margin: 20% 18%;
 
+    scroll-margin-top:25vh;
 }
 
 .card{

@@ -15,22 +15,21 @@ function ExperienceSection(){
     ];
 
     return(
-        <div className="container__section">
-        <h3 id = 'experience' className="section-header">Experience</h3>
-            {experiences.map(experience => 
-                <div key = {experience.group}className="card_experience">
-                    <div className="card_experience__description">
-                        <div className="description__group">
-                            <h5>{experience.group}</h5>
-                            <p>{experience.start_date} - {experience.end_date}</p>
-                        </div>
-                        <h3>{experience.role}</h3>
+        <>
+        {experiences.map(experience => 
+            <div key = {experience.group} className="card_experience">
+                <div className="card_experience__description">
+                    <div className="description__group">
+                        <h5>{experience.group}</h5>
+                        <p>{experience.start_date} - {experience.end_date}</p>
                     </div>
-                    <img className='center-icon'/>
-                    <div className='center-line'></div>
+                    <h3>{experience.role}</h3>
                 </div>
-            )}
-        </div>
+                <img className='center-icon'/>
+                <div className='center-line'></div>
+            </div>
+        )}
+        </>
     )
 }
 

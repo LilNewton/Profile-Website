@@ -56,6 +56,10 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
 
+html{
+    scroll-behavior:smooth;
+}
+
 body {
     background-color:var(--color_background);
 }
