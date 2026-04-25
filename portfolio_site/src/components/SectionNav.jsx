@@ -33,8 +33,6 @@ function SectionNavigation({sectionsList}){
         <div className="section-nav">
             {sectionsList.map(section=> {
                 const  isActive = activeID === section.sectionID;
-
-                console.log({isActive});
                 
                 return(
                     <a key = {section.id} 

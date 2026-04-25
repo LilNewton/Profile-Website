@@ -8,6 +8,10 @@ import ContactSection from './sections/Contacts.jsx';
 {/*Components*/}
 import SectionNavigation from './components/SectionNav.jsx'
 
+function handleViewPDF (fileURL) {
+  window.open(fileURL, '_blank','noopener,noreferrer');
+}
+
 function App() {
 
   const sections = [
@@ -43,7 +47,9 @@ function App() {
         }
     ];
 
-  const workEmail = 'chrisjohnbborigas@gmail.com'
+  const workEmail = 'chrisjohnbborigas@gmail.com';
+
+  const resumeURL = '/Chris-John-Borigas-Resume.pdf';
 
   const greeting = 
     `Good Day! I am Chris John Borigas.
@@ -68,7 +74,6 @@ function App() {
         concept, wireframe, and prototype until its release.
     </p>
     );
-
   
   return (
     <>
@@ -82,7 +87,10 @@ function App() {
         <h2>Chris John B. Borigas</h2>
         <h1>Frontend Developer</h1>
         <p> {greeting}</p>
-        <a className='primary_btn'>Resume</a>
+        <button onClick={() => handleViewPDF(resumeURL)} 
+          className='primary_btn'>
+          Resume
+        </button>
     </header>
 
     {/* About Section */}
