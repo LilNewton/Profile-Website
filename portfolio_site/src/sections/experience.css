@@ -14,22 +14,28 @@
     direction:rtl;
 }
 
+.timeline{
+    display:grid;
+    justify-items:center;
+}
+
 .center-icon{
     grid-column: 2;
     position:absolute;
     z-index:1;
-    height:50px;
-    width:50px;
-    margin-top: -1rem;
+    height:30px;
+    width:30px;
+    margin-top: -0.5rem;
+    justify-self: center;
 
-    background-image: url('../assets/icons/star-circle-fill-accent.svg');
+
+    background-image: url('../assets/icons/bullet-point-90.svg');
+    background-size:30px 30px;
+    background-repeat:no-repeat;
     padding:1px;
 }
 
 .center-line{
-    grid-column: 2;
-    margin-left: 20px;
-    margin-top: 12px;
     width: 10px;
     height: 100%;
     background-color: var(--color_accent);
@@ -38,10 +44,6 @@
     border-style:solid;
     border-left-color: var(--color_primary);
     border-right-color: var(--color_primary);
-}
-
-.card_experience:nth-child(odd) .center-line{
-    margin-right: 20px;
 }
 
 .card_experience:last-child .center-line{

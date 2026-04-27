@@ -11,7 +11,7 @@ function useActiveSection(sectionList){
                         setActiveSectionID(section.target.id);
                     }
                 })
-            }, {threshold: 0.4}
+            }, {threshold: 0.6}
         );
 
         sectionList.forEach((section) => {

@@ -14,7 +14,7 @@ function ToolsSection() {
         { title: 'Streamlit', icon: 'streamlit_logo.svg' },
         { title: 'Laravel', icon: 'laravel_logo.svg' }
         ],
-        'DESIGNS': [
+        'DESIGN': [
         { title: 'Canva', icon: 'canva_logo.svg' },
         { title: 'Figma', icon: 'figma_logo.svg' },
         { title: 'Penpot', icon: 'penpot_logo.svg' }
@@ -35,7 +35,7 @@ function ToolsSection() {
     return(
         <>
         {Object.entries(toolCategories).map(([categoryName, tools]) => (
-            <div key={categoryName} className="card card_tool">
+            <div key={categoryName} className="card_tool">
                 <h2>{categoryName}</h2>
                 <div className="tool-grid">
                     {tools.map(tool => (

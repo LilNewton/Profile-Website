@@ -7,9 +7,24 @@ import ContactSection from './sections/Contacts.jsx';
 
 {/*Components*/}
 import SectionNavigation from './components/SectionNav.jsx'
+import Background from './components/Background.jsx';
 
 function handleViewPDF (fileURL) {
-  window.open(fileURL, '_blank','noopener,noreferrer');
+  const width = 800;
+  const height = 800;
+
+  const left = (window.screen.width / 2) - (width / 2);
+  const top = (window.screen.height / 2) - (height / 2);
+  const windowFeatures = 
+    `popup, 
+    width=${width}, 
+    height=${height}, 
+    left=${left}, 
+    top=${top}, 
+    noopener, 
+    noreferrer`;
+
+  window.open(fileURL, '_blank', windowFeatures);
 }
 
 function App() {
@@ -77,6 +92,8 @@ function App() {
   
   return (
     <>
+    <Background />
+
     <nav >
       <SectionNavigation sectionsList={sections} />
       <a className="fixed-email">{workEmail}</a>

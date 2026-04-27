@@ -1,12 +1,14 @@
 .card_tool{
     display:grid;
     grid-template-columns: 1fr 1fr; 
+    margin-top:3rem;
 }
 
 .tool-grid{
     display:flex;
     flex-wrap:wrap;
 
+    padding-right: 2rem;
     row-gap: 2rem;
     column-gap: 2rem;
 }
@@ -21,5 +23,5 @@
 .tool img{
     width: 3rem;
     height:3rem;
-    margin-right:1rem;
+    margin-right:0.5rem;
 }

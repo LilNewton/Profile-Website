@@ -3,8 +3,8 @@
     flex-direction: column;
     position:fixed;
 
-    top: 50vh;
-    right: 1rem;
+    top: 40vh;
+    right: 2rem;
     width: fit-content;
     translate: 0 -50%;
 }

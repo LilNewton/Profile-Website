@@ -17,7 +17,7 @@ function ProjectSection() {
     return(
         <>
         {projects.map((project, index) => 
-            <div key = {project.title} className="card card_project">
+            <div key = {project.title} className="card_project">
                 <div className="project-detail">
                     <div className="project-detail__title">
                         <h4 className="project-detail__count">

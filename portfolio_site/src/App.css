@@ -13,3 +13,6 @@
 @import 'components/container.css';
 @import 'components/sectionNav.css';
 
+/*Background*/
+@import 'components/background.css';
+

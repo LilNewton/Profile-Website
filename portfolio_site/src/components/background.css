@@ -1,0 +1,38 @@
+.hexagon{
+    position:fixed;
+    z-index: -1;
+    padding: 1px;
+
+
+    background-color: color-mix(in srgb, var(--color_accent), white 20%);
+    mask-image: url('../assets/honey-comb.svg');
+    mask-size:contain;
+    mask-repeat: no-repeat;
+}
+
+.large-hexagon{
+    height:650px;
+    width: 650px;
+
+    right:0%;
+    bottom:0%;
+    translate: 33% 45%;
+}
+
+.medium-hexagon{
+    height:550px;
+    width: 550px;
+
+    left:0%;
+    top:0%;
+    translate: -30% -35%;
+}
+
+.small-hexagon{
+    height:350px;
+    width: 350px;
+
+    right:0%;
+    top:0%;
+    translate: -40% -40%;
+}

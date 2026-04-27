@@ -25,8 +25,11 @@ function ExperienceSection(){
                     </div>
                     <h3>{experience.role}</h3>
                 </div>
-                <img className='center-icon'/>
+                <div className = 'timeline'>
+                    <img className='center-icon'/>
                 <div className='center-line'></div>
+                </div>
+                
             </div>
         )}
         </>
