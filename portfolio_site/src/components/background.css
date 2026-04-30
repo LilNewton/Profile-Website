@@ -1,6 +1,6 @@
 .hexagon{
     position:fixed;
-    z-index: 1;
+    z-index: -1;
     padding: 1px;
 
 
@@ -13,8 +13,8 @@
 .large-hexagon{
     height:650px;
     width: 650px;
+    z-index: 1;
     
-
     right:0%;
     bottom:0%;
     translate: 33% 45%;
@@ -32,7 +32,6 @@
 .small-hexagon{
     height:350px;
     width: 350px;
-    z-index: -1;
 
     right:0%;
     top:0%;
@@ -47,7 +46,7 @@
     top: var(--y);
     left: var(--x);
 
-    animation-name: rtl-in-out; 
+    animation-name: brtl-in-out; 
     animation-duration: var(--duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -59,7 +58,7 @@
     width:100px;
     aspect-ratio:1/1;
 
-    animation-name: spin;
+    animation-name: bee-spin;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -75,19 +74,18 @@
     left: 50%;
     
     border-radius:50%;
-    /* background-color:var(--color_accent); */
     background-image: url('../assets/bee.svg');
     background-size:contain;
     background-repeat:no-repeat;
 
-    animation-name: spin-reverse;
+    animation-name: bee-spin_reverse;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-delay: var(--delay);
 }
 
-@keyframes spin{
+@keyframes bee-spin{
     0%{
         transform:rotate(0deg);
     }
@@ -96,7 +94,7 @@
     }
 }
 
-@keyframes spin-reverse{
+@keyframes bee-spin_reverse{
     0%{
         transform:rotate(0deg);
     }
@@ -105,7 +103,7 @@
     }
 }
 
-@keyframes rtl-in-out{
+@keyframes brtl-in-out{
     0%{
         transform: translateX(20vw) translateY(20vh);
         opacity: 0;

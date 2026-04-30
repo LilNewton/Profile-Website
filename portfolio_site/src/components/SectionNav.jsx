@@ -1,51 +1,59 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-function useActiveSection(sectionList){
-    const [activeSectionID, setActiveSectionID] = useState('');
+function useActiveSection(sectionList) {
+  const [activeSectionID, setActiveSectionID] = useState("");
 
-    useEffect (() => {
-        const observer = new IntersectionObserver(
-            (sections) => {
-                sections.forEach((section) => {
-                    if (section.isIntersecting) {
-                        setActiveSectionID(section.target.id);
-                    }
-                })
-            }, {threshold: 0.6}
-        );
-
-        sectionList.forEach((section) => {
-            const sectionElement = document.getElementById(section.sectionID);
-            if (sectionElement) observer.observe(sectionElement);
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      (sections) => {
+        sections.forEach((section) => {
+          //If the section occupies a percentage of the screen based on
+          //  the threshold, update the activeSectionID
+          //  via the section element's id
+          if (section.isIntersecting) {
+            setActiveSectionID(section.target.id);
+          }
         });
+      },
+      { threshold: 0.6 },
+    );
 
-        return () => observer.disconnect();
-    }, [sectionList]);
+    //Based on the sectionList, start obversing the sections
+    //  via element id
+    sectionList.forEach((section) => {
+      const sectionElement = document.getElementById(section.sectionID);
+      if (sectionElement) {
+        sectionObserver.observe(sectionElement);
+      }
+    });
 
-    return activeSectionID;
+    return () => sectionObserver.disconnect();
+  }, [sectionList]);
+
+  return activeSectionID;
 }
 
-function SectionNavigation({sectionsList}){
+function SectionNavigation({ sectionsList }) {
+  const activeID = useActiveSection(sectionsList);
 
-    const activeID = useActiveSection(sectionsList);
+  return (
+    <div className="section-nav">
+      {sectionsList.map((section, index) => {
+        const isActive = activeID === section.sectionID;
 
-    return(
-        <div className="section-nav">
-            {sectionsList.map(section=> {
-                const  isActive = activeID === section.sectionID;
-                
-                return(
-                    <a key = {section.id} 
-                        className = {`section-name ${isActive ? 'active' : ''}`} 
-                        href = {`#${section.sectionID}`}>
-                        <h5 > {section.title}</h5>
-                        <div className='section-nav__line'></div>
-                    </a>
-                );
-            })}
-      </div>
-    )
-
+        return (
+          <a
+            key={index}
+            className={`section-name ${isActive ? "active" : ""}`}
+            href={`#${section.sectionID}`}
+          >
+            <h5> {section.title}</h5>
+            <div className="section-nav__line"></div>
+          </a>
+        );
+      })}
+    </div>
+  );
 }
 
 export default SectionNavigation;
