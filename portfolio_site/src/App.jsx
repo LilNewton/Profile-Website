@@ -58,7 +58,7 @@ function App() {
 
   const workEmail = "chrisjohnbborigas@gmail.com";
 
-  const resumeURL = "/Chris-John-Borigas-Resume.pdf";
+  const resumeURL = `${import.meta.env.BASE_URL}Chris-John-Borigas-Resume.pdf`;
 
   const greeting = `Good Day! I am Chris John Borigas.
     A frontend developer and Computer Science graduate from
