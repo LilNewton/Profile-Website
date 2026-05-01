@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('./assets/typography/Anton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vend Sans';
+  src: url('./assets/typography/VendSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 *{
     margin:0;

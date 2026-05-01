@@ -1,15 +1,21 @@
+function getImageURL(url) {
+  return new URL(`${url}`, import.meta.url).href;
+}
+
 function ProjectSection() {
   const projects = [
     {
       title: "Raya",
       subtitle: "Chatbot for Unstructured Research Data",
       toolsUsed: ["Python", "Streamlit", "Figma"],
+      image: "../assets/no-image-provided.png",
     },
     {
       title: "OLA",
       subtitle:
         "A Games of the Generals (GG) AI Strategy Engine Trained Using Self-Play",
       toolsUsed: ["Javascript", "React.js", "CSS"],
+      image: "../assets/project-images/ola/home.png",
     },
   ];
 
@@ -31,7 +37,7 @@ function ProjectSection() {
               ))}
             </ul>
           </div>
-          <img></img>
+          <img src={getImageURL(project.image)} />
         </div>
       ))}
     </>
