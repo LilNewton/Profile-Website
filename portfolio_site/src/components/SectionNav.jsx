@@ -3,13 +3,15 @@ import { useState, useEffect } from "react";
 function useActiveSection(sectionList) {
   const [activeSectionID, setActiveSectionID] = useState("");
 
+  /* Observer used to indicate the visible section for 
+    Section navigation title highlighting */
   useEffect(() => {
     const sectionObserver = new IntersectionObserver(
       (sections) => {
         sections.forEach((section) => {
-          //If the section occupies a percentage of the screen based on
-          //  the threshold, update the activeSectionID
-          //  via the section element's id
+          /* If the section occupies a percentage of the screen 
+            based on the threshold, update the activeSectionID
+            via the section element's id */
           if (section.isIntersecting) {
             setActiveSectionID(section.target.id);
           }
@@ -18,8 +20,8 @@ function useActiveSection(sectionList) {
       { threshold: 0.6 },
     );
 
-    //Based on the sectionList, start obversing the sections
-    //  via element id
+    /* Based on the sectionList, start obversing the sections
+      via element id */
     sectionList.forEach((section) => {
       const sectionElement = document.getElementById(section.sectionID);
       if (sectionElement) {

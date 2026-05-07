@@ -11,6 +11,8 @@ import ContactSection from "./sections/Contacts.jsx";
 import SectionNavigation from "./components/SectionNav.jsx";
 import Background from "./components/Background.jsx";
 
+/* PDF Window Pop-up: Made to pop-up at the center of the users
+  monitor instead of a new tab */
 function handleViewPDF(fileURL) {
   const width = 800;
   const height = 800;
@@ -58,6 +60,8 @@ function App() {
 
   const workEmail = "chrisjohnbborigas@gmail.com";
 
+  /* ${import.meta.env.BASE_URL} was added to make the url 
+    correctly direct to the file during deployment */
   const resumeURL = `${import.meta.env.BASE_URL}Chris-John-Borigas-Resume.pdf`;
 
   const greeting = `Good Day! I am Chris John Borigas.
@@ -82,6 +86,9 @@ function App() {
     </>
   );
 
+  /* Used to observe whether elements that have the class 'fade'
+    are visible to the user by a factor of the threshold; 
+    0.5 = 50% visibility) */
   useEffect(() => {
     const fadeObserver = new IntersectionObserver(
       (entries) => {

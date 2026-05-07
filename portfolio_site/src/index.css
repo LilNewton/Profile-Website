@@ -70,13 +70,17 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 small {font-size: 0.750rem; /* 12px */}
 
 /*Standard Effects*/
+/* Text Background Blur: 
+    to hide the background animations*/
 h1, h2, h3, h4, h5, p, small{
     width:fit-content;
     backdrop-filter:blur(3px);
     border-radius: 20px;
 }
 
-
+/* Added to make the transition in navigating 
+    from one section to another smooth of just
+    jumping straight to the section */
 html{
     scroll-behavior:smooth;
 }
@@ -91,6 +95,8 @@ body {
 }
 
 /*Standard Animation*/
+/* Card animation: To add motion to the website
+    instead of static cards scrolling */
 .fade{
     opacity:1;
     transform: scale(1);
